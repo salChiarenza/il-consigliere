@@ -1,0 +1,75 @@
+<!-- Template report Il Consigliere (LeaderAI).
+     Priorita: utile e utilizzabile. Il brand resta leggero; il valore e' nella diagnosi pratica. -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Il Consigliere — settimana {{SETTIMANA}}</title>
+<style>
+  :root{--muschio:#263B32;--nero:#18211F;--avorio:#F8F6F1;--bianco:#FFFFFF;--terracotta:#B95F43;--salvia:#7F9B84;--sabbia:#DED8CD;--grigio:#66716D;}
+  body{margin:0;background:var(--avorio);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif;color:var(--nero);padding:22px;line-height:1.48;}
+  main{max-width:760px;margin:0 auto;background:var(--avorio);}
+  header{border-bottom:3px solid var(--muschio);padding-bottom:14px;margin-bottom:20px;}
+  .brand{font-size:12px;font-weight:800;color:var(--muschio);letter-spacing:.02em;text-transform:uppercase;}
+  h1{font-size:30px;line-height:1.12;margin:6px 0 4px;color:var(--nero);}
+  .meta{font-size:13px;color:var(--grigio);}
+  .verdict{background:var(--muschio);color:var(--avorio);padding:14px 16px;border-radius:8px;margin:18px 0 18px;font-size:18px;font-weight:800;}
+  h2{font-size:17px;margin:22px 0 9px;color:var(--muschio);}
+  p{font-size:15px;margin:0 0 12px;}
+  .facts{border:1px solid var(--sabbia);border-radius:8px;background:var(--bianco);overflow:hidden;margin:10px 0 14px;}
+  .fact{display:grid;grid-template-columns:minmax(175px,.8fr) 1.4fr;gap:12px;padding:10px 12px;border-top:1px solid #ebe5da;font-size:14px;}
+  .fact:first-child{border-top:0;}
+  .fact b{color:var(--terracotta);}
+  .fact span{color:var(--nero);}
+  .plain{border-left:4px solid var(--salvia);background:#EEF2EC;padding:11px 13px;border-radius:6px;margin:10px 0 16px;}
+  .action{background:var(--bianco);border-left:4px solid var(--terracotta);padding:11px 13px;margin:9px 0;border-radius:6px;font-size:15px;}
+  .action b{color:var(--muschio);}
+  .copy{background:#fff;border:1px solid var(--sabbia);border-radius:8px;padding:12px 14px;margin:9px 0;font-size:14px;}
+  .copy code{display:block;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;color:var(--nero);}
+  .note{font-size:13px;color:var(--grigio);border-top:1px solid var(--sabbia);margin-top:22px;padding-top:12px;}
+  @media (max-width:640px){body{padding:14px}.fact{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">LeaderAI · Il Consigliere</div>
+    <h1>Settimana {{SETTIMANA}}</h1>
+    <div class="meta">{{DATA}} · dati locali diagnostici</div>
+  </header>
+
+  <section class="verdict">{{RISPOSTA_SECCA}}</section>
+
+  <section>
+    <h2>Perché te lo dico</h2>
+    <div class="facts">
+      {{PROVE}}
+    </div>
+    <div class="plain">{{SPIEGAZIONE}}</div>
+  </section>
+
+  <section>
+    <h2>Cosa fare adesso</h2>
+    {{SOLUZIONI}}
+  </section>
+
+  <section>
+    <h2>Frasi da usare con l'agente</h2>
+    {{FORMULE}}
+  </section>
+
+  <section>
+    <h2>Controllo rapido</h2>
+    {{CONTROLLI}}
+  </section>
+
+  <section>
+    <h2>Trend</h2>
+    <p>{{TREND}}</p>
+  </section>
+
+  <p class="note">I dati locali servono a capire quali chat pesano. Il contatore ufficiale resta nel pannello Usage del servizio.</p>
+</main>
+</body>
+</html>
